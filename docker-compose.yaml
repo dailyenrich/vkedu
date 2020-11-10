@@ -1,0 +1,43 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+    depends_on:
+      - mysql
+      - redis
+    tty: true
+    restart: always
+    working_dir: /app
+    command: sh -c "cd /app && composer install -vvv && php bin/hyperf.php start"
+    ports:
+      - 9501:9501
+    volumes:
+      - ./server:/app
+    networks:
+      - frontend
+      - backend
+  mysql:
+    image: mysql:5.7
+    tty: true
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    networks:
+      - backend
+  redis:
+    image: redis
+    tty: true
+    restart: always
+    ports:
+      - 2379:2379
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:

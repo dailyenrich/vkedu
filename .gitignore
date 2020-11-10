@@ -1,0 +1,25 @@
+# idea
+.idea
+# 数据
+data/*
+
+# next.js build output
+frontend/.next
+
+# nuxt.js build output
+frontend/.nuxt
+
+# Nuxt generate
+frontend/dist
+
+# node_modules
+frontend/node_modules
+
+# server 配置文件
+server/.env
+
+# server vender
+server/vender
+
+# server/runtime
+server/runtime
