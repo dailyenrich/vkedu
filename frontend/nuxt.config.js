@@ -27,14 +27,23 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/router',
+    '@nuxtjs/style-resources'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxtjs/router'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+  styleResources: {
+    scss: [
+      "@/assets/css/color.scss"
+    ]
+  },
+  css: [
+    "@/assets/css/reset.css",
+  ]
 }
