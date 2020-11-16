@@ -2,7 +2,7 @@
   <div>
     <div class="main">
       <div class="content">
-        <div class="hot-cource">
+        <div class="cource-list">
           <CourseList />
         </div>
         <div>
@@ -49,7 +49,7 @@ export default {
       justify-content: space-between;
       .content {
         width: 70%;
-        .list .item:first-child {
+        .cource-list .list .item:first-child {
           margin-top: 0px;
         }
       }

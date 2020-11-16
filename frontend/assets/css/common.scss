@@ -10,3 +10,6 @@
 .side-border {
   border: 1px solid $main-border-color;
 }
+.hover:hover {
+  color: $main-active-color!important;
+}

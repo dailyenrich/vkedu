@@ -2,10 +2,10 @@
     <div class="header">
         <div class="left">
             <ul>
-                <li><a href="" class="logo"><Logo /></a></li>
-                <li><a href="" class="active">首页</a></li>
-                <li><a href="">课程</a></li>
-                <li><a href="">博客</a></li>
+                <li><a href="/" class="logo"><Logo /></a></li>
+                <li><a href="/" class="active">首页</a></li>
+                <li><a href="/courses">课程</a></li>
+                <li><a href="https://www.sockstack.cn" target="_blank">博客</a></li>
             </ul>
         </div>
         <div class="right">
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-    
+
 }
 </script>
 

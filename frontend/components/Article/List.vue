@@ -5,7 +5,7 @@
         <img :src="item.img" alt="" :style="imgAttr">
         <div class="info">
           <div class="left">
-            <div class="title" :style="titleAttr"><div class="article-tag no-shrink">最新</div>{{item.title}}</div>
+            <div class="title hover" :style="titleAttr"><div class="article-tag no-shrink">最新</div>{{item.title}}</div>
             <div class="desc" :style="descAttr">{{item.desc}}</div>
             <div class="author" :style="authorAttr"><img src="https://images.gitbook.cn/4e9470c0-b75e-11e8-b809-d915783fbfe8?imageView2/1/w/400/h/400" alt="" data-v-0661afbb=""> {{item.author}}</div>
           </div>

@@ -3,6 +3,7 @@
     <Header />
     <div class="container">
       <Nuxt />
+      <a-back-top />
     </div>
   </div>
 </template>

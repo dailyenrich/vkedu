@@ -5,7 +5,7 @@
         <img :src="item.img" alt="" :style="imgAttr">
         <div class="info">
           <div class="left">
-            <div class="title" :style="titleAttr">{{item.title}}</div>
+            <div class="title hover" :style="titleAttr">{{item.title}}</div>
             <div class="desc" :style="descAttr">{{item.desc}}</div>
             <div class="author" :style="authorAttr">{{item.author}}</div>
             <div class="price-info" :style="priceInfoAttr"><span class="price" :style="priceAttr">￥{{item.price}}</span> | {{item.mark}} 订阅</div>
