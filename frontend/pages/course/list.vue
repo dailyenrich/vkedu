@@ -10,9 +10,9 @@
         </div>
       </div>
       <div class="side">
-        <HotArticle />
+<!--        <HotArticle />-->
         <Adimg />
-        <HotUser />
+<!--        <HotUser />-->
         <HotVquan />
       </div>
     </div>
