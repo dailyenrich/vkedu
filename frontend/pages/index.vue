@@ -13,7 +13,7 @@
             </div>
             <div class="right"><a href="">查看更多 ></a></div>
           </div>
-          <CourceList />
+          <CourseList />
         </div>
         <div class="hot-cource">
           <div class="content-title">
@@ -37,12 +37,12 @@
 </template>
 
 <script>
-import CourceList from "~/components/Cource/List";
+import CourseList from "~/components/Course/HotList";
 import ArticleList from "~/components/Article/List";
 
 export default {
   components: {
-    CourceList,
+    CourseList,
     ArticleList
   }
 }

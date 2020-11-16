@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from '~/pages/index'
+import index from '~/router/index'
+import course from '~/router/course'
 
 Vue.use(Router)
 
@@ -9,10 +10,8 @@ export function createRouter() {
   return new Router({
     mode: 'history',
     routes: [
-      {
-        path: '/',
-        component: Index
-      }
+      index,
+      course
     ]
   })
 }
