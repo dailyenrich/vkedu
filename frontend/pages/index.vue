@@ -1,7 +1,15 @@
 <template>
   <div>
-    <div class="banner">
-      <Banner />
+    <div class="main">
+      <div class="content">
+        <div class="banner">
+          <Banner />
+        </div>
+        <List />
+      </div>
+      <div class="side">
+        1
+      </div>
     </div>
   </div>
 </template>
@@ -10,8 +18,21 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 .banner {
   width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  .content {
+    width: 70%;
+  }
+  .side {
+    width: 29%;
+    padding: 20px;
+    border: 1px solid $main-border-color;
+  }
 }
 </style>

@@ -14,7 +14,8 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    'ant-design-vue/dist/antd.css'
+    'ant-design-vue/dist/antd.css',
+    "@/assets/css/reset.css"
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -44,7 +45,4 @@ export default {
       "@/assets/css/color.scss"
     ]
   },
-  css: [
-    "@/assets/css/reset.css",
-  ]
 }
