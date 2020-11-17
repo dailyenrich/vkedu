@@ -47,7 +47,7 @@ export default {
       }
 
       .title {
-        font-size: 20px;
+        font-size: 18px;
       }
       .desc, .author, .price {
         font-size: 14px;
