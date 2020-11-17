@@ -11,7 +11,7 @@ export function createRouter() {
     mode: 'history',
     routes: [
       index,
-      course
+      ...course
     ]
   })
 }
