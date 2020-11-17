@@ -8,7 +8,7 @@
         <li class="author">SOCKSTACK - 高级工程师</li>
         <li class="price">¥ 19 - 1000 订阅</li>
       </ul>
-      <a-button type="danger" size="small" style="background: #ff7000;font-size: 12px">
+      <a-button type="danger" size="small" style="background: #ff7000;">
         立即订阅
       </a-button>
     </div>
@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
   .info {
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     border-bottom: 1px solid $main-border-color;
     .left {
       width: 120px;
@@ -47,14 +47,14 @@ export default {
       }
 
       .title {
-        font-size: 18px;
+        font-size: 20px;
       }
       .desc, .author, .price {
         font-size: 14px;
         color: $main-desc-color;
       }
       .desc {
-        margin-top: 15px;
+        margin-top: 16px;
         max-width: 80%;
         overflow : hidden;
         text-overflow: ellipsis;
@@ -64,11 +64,11 @@ export default {
       }
       .author {
         margin-top: 20px;
-        font-size: 12px;
+        font-size: 13px;
       }
       .price {
         margin-top: 10px;
-        font-size: 12px;
+        font-size: 13px;
       }
     }
   }
