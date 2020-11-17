@@ -38,7 +38,6 @@ export default {
   display: flex;
   justify-content: space-between;
   .content {
-    width: 70%;
     .cource-list .list .item:first-child {
       margin-top: 0px;
     }

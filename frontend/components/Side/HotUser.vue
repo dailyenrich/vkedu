@@ -61,7 +61,7 @@
 <style lang="scss" scoped>
 .hot-list {
   li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     a {
       display: flex;
       color: $main-desc-color;
@@ -70,6 +70,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-size: 14px;
         & > div {
           font-size: 12px;
           margin-top: 8px;
@@ -81,14 +82,14 @@
     }
     img {
       border-radius: 100%;
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       margin-right: 20px;
     }
   }
 }
 .title {
-  padding: 0px 0 20px;
+  padding: 0px 0 15px;
   color: $main-title-color;
 }
 </style>

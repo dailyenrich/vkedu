@@ -27,6 +27,7 @@
     margin-bottom: 20px;
     a {
       color: $main-desc-color;
+      font-size: 14px;
     }
     &:last-child {
       margin-bottom: 0;
@@ -36,5 +37,6 @@
 .title {
   padding: 0px 0 20px;
   color: $main-title-color;
+  font-size: 16px;
 }
 </style>

@@ -48,6 +48,7 @@ export default {
 
       .title {
         font-size: 18px;
+        color: $main-font-color;
       }
       .desc, .author, .price {
         font-size: 14px;

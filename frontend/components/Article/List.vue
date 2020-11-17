@@ -141,7 +141,7 @@ export default {
     display: flex;
     vertical-align: middle;
     color: #222;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     max-width: 394px;
     overflow: hidden;
@@ -151,8 +151,8 @@ export default {
   }
   .desc {
     color: $main-desc-color;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 14px;
     margin: 8px 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -161,11 +161,12 @@ export default {
   }
   .author {
     color: $main-desc-color;
+    font-size: 12px;
     display: flex;
     align-items: center;
     img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         border-radius: 100%;
         margin-right: 10px;
     }

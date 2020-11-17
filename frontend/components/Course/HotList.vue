@@ -1,7 +1,7 @@
 <template>
   <ul class="list">
     <li class="item" v-for="(item, index) in data" :key="index">
-      <a href="">
+      <a :href="item.url">
         <img :src="item.img" alt="" :style="imgAttr">
         <div class="info">
           <div class="left">
@@ -38,39 +38,44 @@ export default {
             desc: "备战大数据，一起跨入5G时代",
             author: "SOCKSTACK - 高级工程师",
             price: 19,
-            maik: 1000
+            mark: 1000,
+            url: "/info",
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
             author: "SOCKSTACK - 高级工程师",
             price: 19,
-            maik: 1000
+            mark: 1000
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
             author: "SOCKSTACK - 高级工程师",
             price: 19,
-            maik: 1000
+            mark: 1000
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
             author: "SOCKSTACK - 高级工程师",
             price: 19,
-            maik: 1000
+            mark: 1000
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
             author: "SOCKSTACK - 高级工程师",
             price: 19,
-            maik: 1000
+            mark: 1000
           },
         ]
       }
@@ -79,8 +84,8 @@ export default {
       type: Object,
       default: function() {
         return {
-          "width": "150px",
-          "max-width": "150px",
+          "width": "120px",
+          "max-width": "120px",
         }
       }
     },
@@ -122,7 +127,7 @@ export default {
     "size": {
       type: String,
       default: function() {
-        return "large"
+        return "small"
       }
     }
   }
@@ -156,7 +161,7 @@ export default {
     display: inline-block;
     vertical-align: middle;
     color: #222;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     max-width: 394px;
     overflow: hidden;
@@ -166,9 +171,9 @@ export default {
   }
   .desc {
     color: $main-desc-color;
-    font-size: 16px;
-    line-height: 16px;
-    margin: 25px 0 20px;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     -ms-text-overflow: ellipsis;
@@ -176,10 +181,15 @@ export default {
   }
   .author {
     color: $main-desc-color;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 20px;
   }
   .price-info {
-    margin-top: 25px;
+    margin-top: 10px;
     color: $main-desc-color;
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 </style>>

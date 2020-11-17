@@ -56,9 +56,6 @@ export default {
 .main {
   display: flex;
   justify-content: space-between;
-  .content {
-    width: 70%;
-  }
   .content-title {
     display: flex;
     margin-top: 20px;

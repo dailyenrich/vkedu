@@ -1,7 +1,7 @@
 <template>
   <ul class="list">
     <li class="item" v-for="(item, index) in data" :key="index">
-      <a href="">
+      <a :href="item.url">
         <img :src="item.img" alt="" :style="imgAttr">
         <div class="info">
           <div class="left">
@@ -33,6 +33,7 @@ export default {
       default: function() {
         return [
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
@@ -41,6 +42,7 @@ export default {
             maik: 1000
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
@@ -49,6 +51,7 @@ export default {
             maik: 1000
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
@@ -57,6 +60,7 @@ export default {
             maik: 1000
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
@@ -65,6 +69,7 @@ export default {
             maik: 1000
           },
           {
+            url: "/info",
             img: "https://images.gitbook.cn/Fu479gYM0LhbsbMeGJ32xs3MkrtJ?imageMogr2/thumbnail/400x",
             title: "大数据开发",
             desc: "备战大数据，一起跨入5G时代",
@@ -148,15 +153,15 @@ export default {
     justify-content: space-between;
     align-items: center;
 
-  .left {
-    align-self: flex-start;
-  }
+    .left {
+      align-self: flex-start;
+    }
   }
   .title {
     display: inline-block;
     vertical-align: middle;
     color: #222;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     max-width: 394px;
     overflow: hidden;
@@ -166,9 +171,9 @@ export default {
   }
   .desc {
     color: $main-desc-color;
-    font-size: 16px;
-    line-height: 16px;
-    margin: 25px 0 20px;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     -ms-text-overflow: ellipsis;
@@ -176,10 +181,15 @@ export default {
   }
   .author {
     color: $main-desc-color;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 20px;
   }
   .price-info {
-    margin-top: 25px;
+    margin-top: 10px;
     color: $main-desc-color;
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 </style>>

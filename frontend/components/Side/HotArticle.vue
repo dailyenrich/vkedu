@@ -40,6 +40,7 @@
     margin-bottom: 20px;
     a {
       color: $main-desc-color;
+      font-size: 14px;
     }
     &:last-child {
       margin-bottom: 0;
@@ -51,7 +52,7 @@
   height: 18px;
   color: rgba(170,176,193,0.3);
   font-family: bebas-regular, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
   line-height: 18px;
@@ -64,6 +65,7 @@
   color: #fff;
 }
 .title {
+  font-size: 16px;
   padding: 0px 0 20px;
   color: $main-title-color;
 }
