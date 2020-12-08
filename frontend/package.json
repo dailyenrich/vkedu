@@ -14,7 +14,8 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "swiper": "^5.4.5",
-    "vue-awesome-swiper": "^4.1.1"
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
