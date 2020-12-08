@@ -35,8 +35,12 @@ export default {
 </script>
 
 <style lang="scss">
+  .main{
+    display: flex;
+    justify-content: space-between;
+  }
   .content{
-    width: 70%;
+    width: 72%;
     img{
       max-width: 100%!important;
     }
