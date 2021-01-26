@@ -10,20 +10,18 @@
   },
   "dependencies": {
     "@nuxtjs/router": "^1.5.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "ant-design-vue": "^1.6.5",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.14.12",
     "swiper": "^5.4.5",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-markdown": "^2.2.4",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0"
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.1"
   },
   "config": {
     "nuxt": {

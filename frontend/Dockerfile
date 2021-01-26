@@ -1,8 +1,8 @@
 FROM node:12.20.0-alpine3.12 as builder
 
-COPY . /app
+#COPY . /app
 
-RUN apk add python3 && cd /app && rm -rf node_modules && npm install && npm run generate
+RUN apk add python3
 
 # FROM node:12.20.0-alpine3.12
 
@@ -13,4 +13,4 @@ WORKDIR /app
 
 EXPOSE 80
 
-CMD [ "npm", "run","start" ]
+#CMD [ "npm", "run","start" ]

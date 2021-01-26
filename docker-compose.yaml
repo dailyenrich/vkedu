@@ -1,8 +1,24 @@
 version: "3"
 services:
-  app:
+  web:
     build:
-      context: .
+      context: frontend
+    depends_on:
+      - api
+    tty: true
+    restart: always
+    working_dir: /app
+    command: sh -c "cd /app && rm -rf node_modules && npm install && npm run generate && npm run start"
+    ports:
+      - 80:80
+    volumes:
+      - ./frontend:/app
+    networks:
+      - frontend
+      - backend
+  api:
+    build:
+      context: server
     depends_on:
       - mysql
       - redis
@@ -41,3 +57,7 @@ services:
 networks:
   frontend:
   backend:
+
+
+
+
