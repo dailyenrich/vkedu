@@ -50,5 +50,13 @@ func Init()  {
 }
 
 func Info(args ...interface{})  {
-	log.Info(args...)
+	log.Infoln(args...)
+}
+
+func Debug(args ...interface{})  {
+	log.Debugln(args...)
+}
+
+func Warn(args ...interface{})  {
+	log.Warnln(args...)
 }
