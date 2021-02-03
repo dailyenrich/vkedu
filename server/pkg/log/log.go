@@ -5,12 +5,13 @@ import (
 	"github.com/sirupsen/logrus"
 	"os"
 	"time"
+	"vke/pkg/config"
 	"vke/util"
 )
 
 var (
 	log     = logrus.New()
-	logPath = "runtime/log/"
+	logPath = config.Get().Log.Path
 	fileName = "%s.log"
 	fileNameFormat = "20060102"
 )
@@ -19,19 +20,10 @@ func Logger() *logrus.Logger {
 	return log
 }
 
-func setup()  {
-	log.SetFormatter(&logrus.JSONFormatter{
-		TimestampFormat:   "2006-01-02 15:04:05",
-		PrettyPrint:       true,
-	})
-
-	log.SetReportCaller(true)
-
-	setLogfile()
-}
-
-func setLogfile()  {
-	logFile := fmt.Sprintf(logPath+fileName, time.Now().Format(fileNameFormat))
+func setLogfile(logFile string)  {
+	if logFile == "" {
+		logFile = fmt.Sprintf(logPath+fileName, time.Now().Format(fileNameFormat))
+	}
 	if !util.FileExist(logPath) {
 		if err := os.MkdirAll(logPath, 0666); err != nil {
 			panic(err)
@@ -45,8 +37,15 @@ func setLogfile()  {
 	log.SetOutput(file)
 }
 
-func Init()  {
-	setup()
+func Init(logFile string)  {
+	log.SetFormatter(&logrus.JSONFormatter{
+		TimestampFormat:   "2006-01-02 15:04:05",
+		PrettyPrint:       true,
+	})
+
+	log.SetReportCaller(true)
+
+	setLogfile(logFile)
 }
 
 func Info(args ...interface{})  {

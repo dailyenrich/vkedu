@@ -1,9 +1,16 @@
 package log
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+	"time"
+)
 
 func before()  {
-	Init()
+	Init(fmt.Sprintf(
+		"runtime/log/%s.log",
+		time.Now().Format(fileNameFormat),
+	))
 }
 
 func TestInfo(t *testing.T) {

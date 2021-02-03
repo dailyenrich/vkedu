@@ -1,7 +1,0 @@
-{
-  "file": "D:/code/vkedu/server/pkg/log/log.go:53",
-  "func": "vke/pkg/log.Info",
-  "level": "info",
-  "msg": "ok",
-  "time": "2021-02-02 18:31:53"
-}
