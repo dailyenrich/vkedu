@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"github.com/spf13/viper"
 )
 
@@ -20,7 +19,6 @@ func init() {
 		panic(err)
 	}
 
-	fmt.Println(viper.Get("port"))
 	viper.Unmarshal(conf)
 }
 

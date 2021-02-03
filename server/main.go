@@ -1,19 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"github.com/gin-gonic/gin"
-	"net/http"
-	"vke/pkg/config"
+	"vke/pkg/app"
 	"vke/pkg/log"
+	"vke/router"
+	"vke/router/middleware"
 )
 
 func main()  {
-	r := gin.Default()
-	log.Init("")
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, "pong")
-		log.Info("ojbk")
+	app.Init(func() {
+		log.Init("")
+		router.Init()
+		middleware.Init()
 	})
-	r.Run(fmt.Sprintf(":%s", config.Get().Port))
+	app.Run()
 }
