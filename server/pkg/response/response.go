@@ -6,7 +6,7 @@ type Response struct {
 	Data interface{} `json:"data"`
 }
 
-func Error(code uint, message string, data interface{}) Response {
+func Resp(code uint, message string, data interface{}) Response {
 	return Response{
 		Code:    code,
 		Message: message,

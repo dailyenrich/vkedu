@@ -4,8 +4,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"net/http"
+	"vke/model"
 	"vke/pkg/param"
 	"vke/pkg/response"
+	"vke/service/user"
 )
 
 type UserRegisterParams struct {
@@ -26,8 +28,22 @@ func (u UserRegisterParams) Rule() param.R {
 func UserRegisterHandler(c *gin.Context)  {
 	params := new(UserRegisterParams)
 	err := c.ShouldBind(params)
-	err = param.Validate(err.(validator.ValidationErrors), params)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, response.Error(response.Err, response.Message[response.Err], err.Error()))
+		err = param.Validate(err.(validator.ValidationErrors), params)
 	}
+	if err != nil {
+		c.JSON(http.StatusBadRequest, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+	}
+
+	dto := new(model.UserDto)
+	dto.Username = params.Username
+	dto.Password = params.Password
+
+	service := user.NewUserService()
+	err = service.Register(dto)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+	}
+
+	c.JSON(http.StatusOK, response.Resp(response.Ok, response.Message[response.Ok], "注册成功"))
 }

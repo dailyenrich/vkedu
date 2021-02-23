@@ -8,11 +8,15 @@ type UserService struct {
 	
 }
 
-func (u UserService) Register(user model.UserDto) error {
-	panic("implement me")
+func NewUserService() *UserService {
+	return &UserService{}
 }
 
-func (u UserService) Login(member model.UserDto) (model.User, error) {
+func (u UserService) Register(user *model.UserDto) error {
+	return nil
+}
+
+func (u UserService) Login(member *model.UserDto) (model.User, error) {
 	panic("implement me")
 }
 
