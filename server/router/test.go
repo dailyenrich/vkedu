@@ -10,6 +10,6 @@ import (
 func testApi()  {
 	app.Engine.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"message": "pong"})
-		log.Info("ping")
+		log.Logger().Infoln("ping")
 	})
 }

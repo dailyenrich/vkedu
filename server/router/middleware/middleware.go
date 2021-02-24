@@ -1,5 +1,5 @@
 package middleware
 
-func Init()  {
+func Init() {
 	test()
 }

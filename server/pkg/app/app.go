@@ -12,7 +12,7 @@ var (
 )
 
 func Init(fn func())  {
-	lifeCycle["init"] = fn
+	fn()
 }
 
 func Update(fn func())  {
@@ -24,6 +24,5 @@ func After(fn func())  {
 }
 
 func Run() {
-	lifeCycle["init"]()
 	Engine.Run(fmt.Sprintf(":%s", config.Get().Port))
 }

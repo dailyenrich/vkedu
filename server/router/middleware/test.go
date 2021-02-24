@@ -1,7 +1,6 @@
 package middleware
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"vke/pkg/app"
 	"vke/pkg/log"
@@ -9,8 +8,7 @@ import (
 
 func test()  {
 	app.Engine.Use(func(c *gin.Context) {
-		fmt.Println("okkkkkkkkkkkkkkkkkkkkkkkkk")
-		log.Info(c.Request.URL)
+		log.Logger().Infoln(c.Request.URL)
 		c.Next()
 	})
 }

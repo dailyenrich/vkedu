@@ -25,7 +25,7 @@ func (u UserRegisterParams) Rule() param.R {
 	}
 }
 
-func UserRegisterHandler(c *gin.Context)  {
+func UserRegisterHandler(c *gin.Context) {
 	params := new(UserRegisterParams)
 	err := c.ShouldBind(params)
 	if err != nil {
