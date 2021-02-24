@@ -32,7 +32,8 @@ func UserRegisterHandler(c *gin.Context)  {
 		err = param.Validate(err.(validator.ValidationErrors), params)
 	}
 	if err != nil {
-		c.JSON(http.StatusBadRequest, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+		c.JSON(http.StatusOK, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+		return
 	}
 
 	dto := new(model.UserDto)
@@ -42,7 +43,8 @@ func UserRegisterHandler(c *gin.Context)  {
 	service := user.NewUserService()
 	err = service.Register(dto)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+		c.JSON(http.StatusOK, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+		return
 	}
 
 	c.JSON(http.StatusOK, response.Resp(response.Ok, response.Message[response.Ok], "注册成功"))
