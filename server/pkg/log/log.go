@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 	"vke/pkg/config"
-	"vke/util"
+	"vke/pkg/util"
 )
 
 var (

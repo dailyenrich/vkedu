@@ -1,7 +1,9 @@
 package user
 
 import (
+	"time"
 	"vke/model"
+	"vke/pkg/hash"
 	user2 "vke/repository/user"
 )
 
@@ -14,6 +16,14 @@ func NewUserService() *UserService {
 }
 
 func (u UserService) Register(user *model.UserDto) error {
+	hash := hash.NewHash()
+	bytes, err := hash.Make([]byte(user.Password))
+	if err != nil {
+		return err
+	}
+	user.Password = string(bytes)
+	user.CreatedAt = time.Now()
+	user.UpdatedAt = time.Now()
 	return user2.InsertUser(user)
 }
 

@@ -21,6 +21,8 @@ func (u UserRegisterParams) Rule() param.R {
 	return param.R{
 		"Username": {
 			"required": "用户名不能为空",
+			"min": "用户名最小6位",
+			"max": "用户名最大20位",
 		},
 	}
 }
