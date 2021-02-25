@@ -1,3 +1,9 @@
 port: 8081
 log:
   path: "runtime/log/"
+mysql:
+  username: root
+  password: fairy480
+  hostname: www.gjypzc.com
+  port: 3306
+  database: vkedu

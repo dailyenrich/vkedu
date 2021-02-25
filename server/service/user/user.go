@@ -2,6 +2,7 @@ package user
 
 import (
 	"vke/model"
+	user2 "vke/repository/user"
 )
 
 type UserService struct {
@@ -13,7 +14,7 @@ func NewUserService() *UserService {
 }
 
 func (u UserService) Register(user *model.UserDto) error {
-	return nil
+	return user2.InsertUser(user)
 }
 
 func (u UserService) Login(member *model.UserDto) (model.User, error) {

@@ -3,11 +3,13 @@ package app
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
 	"vke/pkg/config"
 )
 
 var (
 	Engine = gin.Default()
+	GormDB *gorm.DB
 	lifeCycle = make(map[string]func(), 3)
 )
 
