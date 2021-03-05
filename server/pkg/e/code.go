@@ -1,4 +1,4 @@
-package response
+package e
 
 const (
 	Ok = 2000

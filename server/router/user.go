@@ -6,5 +6,5 @@ import (
 )
 
 func userApi()  {
-	app.Engine.GET("/user", user.UserRegisterHandler)
+	app.Engine.GET("/user", user.RegisterHandler)
 }

@@ -1,4 +1,4 @@
-package response
+package e
 
 type Response struct {
 	Code uint `json:"code"`

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"vke/model"
 	"vke/pkg/param"
-	"vke/pkg/response"
+	"vke/pkg/e"
 	"vke/service/user"
 )
 
@@ -27,14 +27,14 @@ func (u UserRegisterParams) Rule() param.R {
 	}
 }
 
-func UserRegisterHandler(c *gin.Context) {
+func RegisterHandler(c *gin.Context) {
 	params := new(UserRegisterParams)
 	err := c.ShouldBind(params)
 	if err != nil {
 		err = param.Validate(err.(validator.ValidationErrors), params)
 	}
 	if err != nil {
-		c.JSON(http.StatusOK, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+		c.JSON(http.StatusOK, e.Resp(e.Err, e.Message[e.Err], err.Error()))
 		return
 	}
 
@@ -45,9 +45,9 @@ func UserRegisterHandler(c *gin.Context) {
 	service := user.NewUserService()
 	err = service.Register(dto)
 	if err != nil {
-		c.JSON(http.StatusOK, response.Resp(response.Err, response.Message[response.Err], err.Error()))
+		c.JSON(http.StatusOK, e.Resp(e.Err, e.Message[e.Err], err.Error()))
 		return
 	}
 
-	c.JSON(http.StatusOK, response.Resp(response.Ok, response.Message[response.Ok], "注册成功"))
+	c.JSON(http.StatusOK, e.Resp(e.Ok, e.Message[e.Ok], "注册成功"))
 }

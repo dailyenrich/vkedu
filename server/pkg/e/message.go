@@ -1,4 +1,4 @@
-package response
+package e
 
 var Message = map[uint]string{
 	Err: "请求错误",
