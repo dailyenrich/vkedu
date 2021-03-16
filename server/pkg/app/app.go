@@ -5,10 +5,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 	"vke/pkg/config"
-	"vke/pkg/log"
-	"vke/pkg/model"
-	"vke/router"
-	"vke/router/middleware"
 )
 
 var (
@@ -16,11 +12,8 @@ var (
 	GormDB *gorm.DB
 )
 
-func init()  {
-	log.Init("")
-	router.Init()
-	middleware.Init()
-	GormDB = model.InitGormDB()
+func Init(fn func())  {
+	fn()
 }
 
 func Run() {
