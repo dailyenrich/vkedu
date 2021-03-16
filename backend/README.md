@@ -1,4 +1,4 @@
-# vke-new
+# vue-antd-admin
 
 ## Project setup
 ```

@@ -1,35 +1,27 @@
 {
-  "name": "vke-new",
+  "name": "vue-antd-admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port=3000",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@toast-ui/editor": "^2.4.0",
-    "@types/webpack-env": "^1.14.1",
-    "axios": "^0.19.1",
-    "codemirror": "^5.58.1",
-    "core-js": "^3.4.3",
-    "element-ui": "^2.13.0",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0",
-    "tui-editor": "^1.4.10",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.3"
+    "ant-design-vue": "^1.7.4",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.4",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.11",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
@@ -40,13 +32,14 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
+    },
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not dead"
   ]
 }
