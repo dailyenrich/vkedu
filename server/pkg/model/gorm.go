@@ -9,7 +9,7 @@ import (
 	"vke/pkg/config"
 )
 
-func InitGormDB(fn func(db *gorm.DB))  {
+func InitGormDB() *gorm.DB {
 	db, err := gorm.Open(
 		mysql.Open(
 			fmt.Sprintf(
@@ -32,5 +32,6 @@ func InitGormDB(fn func(db *gorm.DB))  {
 	sqlDB.SetMaxIdleConns(10)
 	sqlDB.SetMaxOpenConns(100)
 	sqlDB.SetConnMaxLifetime(time.Hour)
-	fn(db)
+
+	return db
 }

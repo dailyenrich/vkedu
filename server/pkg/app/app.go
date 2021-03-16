@@ -5,24 +5,22 @@ import (
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 	"vke/pkg/config"
+	"vke/pkg/log"
+	"vke/pkg/model"
+	"vke/router"
+	"vke/router/middleware"
 )
 
 var (
 	Engine = gin.Default()
 	GormDB *gorm.DB
-	lifeCycle = make(map[string]func(), 3)
 )
 
-func Init(fn func())  {
-	fn()
-}
-
-func Update(fn func())  {
-	lifeCycle["update"] = fn
-}
-
-func After(fn func())  {
-	lifeCycle["after"] = fn
+func init()  {
+	log.Init("")
+	router.Init()
+	middleware.Init()
+	GormDB = model.InitGormDB()
 }
 
 func Run() {
